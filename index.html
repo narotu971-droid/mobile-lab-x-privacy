@@ -1,160 +1,93 @@
-# Privacy Policy — Mobile Lab X
-
-
-**Last updated: November 12, 2026**
-
-
-This Privacy Policy describes how the **Mobile Lab X** Android application ("the App") handles information. It applies to the App only and describes **only features that actually exist in the App**. The App does **not** require or create user accounts.
-
-
-
-## 1. Internet Usage
-
-
-The App requires an active internet connection and uses it to:
-
-
-- Fetch the public phone-specifications database over HTTPS from `raw.githubusercontent.com`.
-- Load device images over HTTPS from `fdn2.gsmarena.com`. The App only loads image URLs from this verified host; URLs from other hosts are ignored.
-- Load and serve advertisements through the Google Mobile Ads SDK (AdMob), as described in §2.
-
-
-The full catalog is fetched from the network whenever it is loaded; the App does not keep a full catalog cache for offline browsing and cannot display the catalog offline. For optional catalog change notifications, the App stores a compact local snapshot and notification metadata as described in §4. The servers receive your IP address and standard request metadata (including the requested URL and user agent). The App does not send favorites, notification preferences, language or appearance preferences, local notification history, contacts, or files to these servers.
-
-
-## 2. Advertising
-
-
-The App displays advertisements provided by **Google AdMob** (the Google Mobile Ads SDK). When ads are loading or shown, **Google**—not the App—receives and processes data such as your IP address, device identifiers (including, where available and permitted, the Google advertising ID), device characteristics, and approximate location derived from IP, in accordance with Google's own privacy policy and terms:
-
-
-- Google's Privacy & Terms: https://policies.google.com/technologies/ads
-- Google Ads & Technology settings (turn off ad personalization for your account): https://adssettings.google.com
-
-
-Ad formats in a release may include app-open, banner, interstitial, and rewarded ads. App-open ads are served only when a valid app-open ad unit is configured for that release; otherwise this format is disabled. Rewarded ads are shown only after you explicitly choose to watch them.
-
-
-In regions where Google's privacy messaging requires it (for example the EEA and the UK), the App shows Google's **User Messaging Platform (UMP) consent form** before ad serving begins, and honors the consent choice you make there. You can change or withdraw your consent at any time via the **"Privacy options"** entry in the App's Settings screen (shown where required), or via Google Ads Settings linked above. The App does not itself store, export, or sell any advertising profile. Outside consent regions, the App's data collection remains as described in §3.
-
-
-## 3. Data Collection
-
-
-The App has no account system and does not include app-side analytics or tracking. Beyond the advertising data processed by Google as described in §2, the App does not request access to:
-
-
-- Location (GPS).
-- Camera or microphone.
-- Contacts, call logs, SMS, or phone state.
-
-
-## 4. Local Storage
-
-
-The App stores data **on your device only**:
-
-
-- Your app preferences (language, dark mode, favorite device IDs, and whether app notifications are enabled).
-- A compact notification snapshot containing public device IDs and hashes of selected public specification fields, used to detect catalog changes.
-- Notification metadata needed to prevent duplicate notifications, including pending event device IDs, brand/model, event type, timestamp and status, processed event IDs, and the last-send time.
-- The last automated notification type, used to rotate notification content.
-- The UMP consent-decision record kept by the Google Mobile Ads SDK when required by your region.
-
-
-The full catalog is held for the current app session and is not cached to disk; the compact notification snapshot described above is stored locally. The App disables Android backup (`android:allowBackup="false"`). Local app data is removed when you uninstall the App; there is no in-app clear-cache control.
-
-
-## 5. Permissions Summary
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Permission | Used for |
-| --- | --- |
-| `INTERNET` | Fetching the public specs database and device images, and ad delivery |
-| `ACCESS_NETWORK_STATE` | Checking for a validated internet connection before fetching |
-| `POST_NOTIFICATIONS` | Posting the app's own optional catalog-change and device/game-exploration notifications on Android 13+ (granted only if you approve the system dialog) |
-
-
-
-These are the three permissions declared directly by the App. The final merged Android package also includes permissions contributed by Google Mobile Ads and AndroidX WorkManager, including advertising ID and Android Ad Services permissions, plus permissions used for background work (such as `WAKE_LOCK` and `FOREGROUND_SERVICE`). Ad-related processing is described in §2.
-
-
-## 6. Children's Privacy
-
-
-The App is a reference tool for phone specifications and does not knowingly collect children's personal information. Network providers and the advertising SDK still receive the connection metadata described above.
-
-
-## 7. Changes to This Policy
-
-
-Updates to this policy will be published at the same location where this document is distributed, with an updated date.
-
-
-
-# سياسة الخصوصية — Mobile Lab X (ملخص بالعربية)
-
-
-- يتطلب التطبيق اتصالاً بالإنترنت؛ يجلب الكتالوج عند تحميله ولا يحفظ نسخة محلية للعمل دون اتصال.
-- لأجل إشعارات تغييرات الكتالوج، يحفظ التطبيق محلياً ملخصاً محدوداً يتضمن معرّفات الأجهزة وبصمات لبعض المواصفات العامة، وبيانات الإشعارات اللازمة لمنع تكرارها؛ ولا يحفظ نسخة كاملة من الكتالوج. لا تُرسل هذه البيانات المحلية إلى خوادم التطبيق.
-- تُحمّل الصور عبر HTTPS من المضيف الموثوق `fdn2.gsmarena.com` فقط؛ ويجري تجاهل روابط الصور من مضيفين آخرين.
-- **يعرض التطبيق إعلانات عبر شبكة Google AdMob (SDK إعلانات Google):** عند تحميل الإعلانات أو عرضها تتلقى Google بيانات مثل عنوان IP ومعرّفات الجهاز (بما فيها معرّف إعلانات Google عند توفره وفق سياساتها) وفق سياسة خصوصية Google وشروطها. تشمل صيغ الإعلانات: إعلانات الافتتاح والبينر والبيني والمكافأة بحسب إعداد إصدار التطبيق. لا تُفعّل إعلانات الافتتاح إلا عند ضبط معرّف صالح لها، ولا تُعرض إعلانات المكافأة إلا بعد اختيارك مشاهدتها.
-- في المناطق التي تقتضيها قوانين حماية البيانات (مثل الاتحاد الأوروبي والمملكة المتحدة) يُعرض نموذج الموافقة من Google (UMP) قبل بدء الإعلانات، ويُحترم اختيارك. يمكنك تعديل الإعدادات في أي وقت عبر «الإعدادات > خيارات الخصوصية» داخل التطبيق حيث يظهر هذا الخيار، أو إعدادات إعلانات Google: https://policies.google.com/technologies/ads
-- لا يرسل التطبيق نفسه المفضلة أو إعدادات اللغة والمظهر إلى أي خادم، ولا يتضمن تحليلات أو نظام حسابات، ولا يجمع يدوياً أي بيانات شخصية.
-- تُحفظ محلياً تفضيلات اللغة والوضع الداكن والمفضلة والإشعارات، وبيانات محدودة عن تغييرات الأجهزة والإشعارات لمنع تكرارها، وسجل الموافقة الذي يحفظه SDK الإعلانات عند تطلّبه. لا تُحفظ نسخة كاملة من الكتالوج، ويُعطّل النسخ الاحتياطي عبر Android (`allowBackup=false`). تُحذف بيانات التطبيق عند إزالته.
-- الصلاحيات التي يعلنها التطبيق مباشرة هي `INTERNET` للاتصال، `ACCESS_NETWORK_STATE` للتحقق من توفر الإنترنت، و`POST_NOTIFICATIONS` لإشعاراته الاختيارية على Android 13+ بعد موافقتك. قد تضيف مكتبات الإعلانات والعمل الخلفي صلاحيات تقنية أخرى؛ وتُشرح معالجة بيانات الإعلانات في الفقرة أعلاه.
-
-
-آخر تحديث: 12 نوفمبر 2026.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Copilot Fusion · gpt-6-luna
-
-
-
-
-
-
-
-
-
-
-
-## You said: هل انسخه كما هو و اضعه الخصوصيه في الموقع
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Mobile Lab X</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: auto; 
+            color: #333; 
+            background: #ffffff;
+        }
+        h1 { color: #1a1a1a; font-size: 24px; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; }
+        h2 { color: #222; font-size: 18px; margin-top: 25px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+        h3 { color: #444; font-size: 16px; margin-top: 15px; }
+        p, li { font-size: 15px; color: #555; }
+        ul { padding-left: 20px; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-size: 14px; color: #d63384; }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy for Mobile Lab X</h1>
+    <p><strong>Effective Date:</strong> May 24, 2024<br>
+    <strong>Last Updated:</strong> May 24, 2024<br>
+    <strong>Application Name:</strong> Mobile Lab X<br>
+    <strong>Package Name:</strong> <code>com.aistudio.phonefps.wkyz</code></p>
+
+    <h2>1. Overview</h2>
+    <p>Mobile Lab X ("we," "our," or "us") respects your privacy. This Privacy Policy explains our privacy practices regarding the collection, use, and disclosure of information when you use our mobile application (the "App").</p>
+    <p>Mobile Lab X is an informational smartphone specification, comparison, and gaming hardware estimation tool. The App is designed to function without requiring user registration, personal logins, or the input of personal data.</p>
+
+    <h2>2. Information Collection and Use</h2>
+    <h3>A. Personal Data</h3>
+    <p>We do not collect, request, store, or transmit any Personally Identifiable Information (PII)—such as your name, email address, phone number, contact list, real-time geographic location, or identity information.</p>
+    
+    <h3>B. Data Stored Locally on Your Device</h3>
+    <p>To provide a customized user experience, Mobile Lab X saves certain preference data locally on your device using Android SharedPreferences. This data remains on your device and is never transmitted to our servers or any external party:</p>
+    <ul>
+        <li><strong>UI Preferences:</strong> Dark Mode toggle and selected language (English / Arabic).</li>
+        <li><strong>Notification Preferences:</strong> Your preference regarding automated local device notifications.</li>
+        <li><strong>Favorites:</strong> A list of device identifiers for smartphones you have bookmarked.</li>
+    </ul>
+
+    <h2>3. Android System Permissions Requested</h2>
+    <p>Mobile Lab X requests only the minimum required Android system permissions necessary to deliver its features:</p>
+    <ul>
+        <li><code>android.permission.INTERNET</code>: Required to fetch publicly hosted device specification data, load phone product images, and serve advertisements.</li>
+        <li><code>android.permission.ACCESS_NETWORK_STATE</code>: Used to check whether your device has an active internet connection before initiating network requests.</li>
+        <li><code>android.permission.POST_NOTIFICATIONS</code>: (Android 13 / API 33 and higher) Used to post optional local notifications on your device regarding catalog updates. You can enable or disable notifications at any time via the App’s settings or your device system settings.</li>
+    </ul>
+
+    <h2>4. Third-Party Services and Advertising</h2>
+    <p>To maintain the App as a free service, Mobile Lab X integrates third-party SDKs for network connectivity, image loading, and advertising display. These third parties may collect non-personal device information as described in their respective privacy policies.</p>
+    
+    <h3>A. Google AdMob & Google User Messaging Platform (UMP)</h3>
+    <p>We use Google Mobile Ads (AdMob) to serve advertisements within the App, and the Google User Messaging Platform (UMP) SDK to request user consent for personalized or non-personalized advertising where required by law (such as in the EEA and UK).</p>
+    <p>Google AdMob may collect and process information such as:</p>
+    <ul>
+        <li>Mobile advertising identifiers (e.g., Google Advertising ID).</li>
+        <li>IP address (used to infer approximate country/city level location for ad serving).</li>
+        <li>Technical diagnostic data, performance metrics, and ad interaction data.</li>
+    </ul>
+    <p>For users in regions subject to GDPR/CCPA regulations, you are presented with a consent form powered by Google UMP upon launching the App. You can review or change your ad privacy choices at any time inside the App by visiting Settings > Privacy Options.</p>
+
+    <h3>B. Data and Asset Providers</h3>
+    <ul>
+        <li><strong>GitHub Raw (raw.githubusercontent.com):</strong> The App fetches public phone specification data hosted on GitHub over secure HTTPS connections.</li>
+        <li><strong>GSMArena (fdn2.gsmarena.com):</strong> Product images are dynamically retrieved from GSMArena’s content delivery network over secure HTTPS connections.</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>Mobile Lab X does not knowingly collect or solicit any personal information from children under the age of 13 (or under the age of 16 in certain jurisdictions). The App is intended for general audiences interested in technology and smartphone specifications. If you believe a child has provided us with personal information through a third-party service, please contact us so we can take appropriate measures.</p>
+
+    <h2>6. Data Security</h2>
+    <p>Because Mobile Lab X does not collect or transmit personal user data to external servers, your data privacy is inherently protected on your device. Network requests for device specifications and images are securely transmitted using encrypted HTTPS protocols.</p>
+
+    <h2>7. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Effective Date." You are advised to review this Privacy Policy periodically for any changes.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:narotu971@gmail.com">narotu971@gmail.com</a></li>
+        <li><strong>GitHub Profile:</strong> <a href="https://github.com/narotu971-droid" target="_blank">narotu971-droid</a></li>
+    </ul>
+
+</body>
+</html>
